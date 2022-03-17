@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="cat" class="com.ghnb.pojo.Cat"></bean>
+    <bean id="dog" class="com.ghnb.pojo.Dog"></bean>
+
+<!--    使用xml对bean进行朴素装配-->
+<!--    <bean id="client" class="com.ghnb.pojo.Client">-->
+<!--        <property name="cat" ref="cat"></property>-->
+<!--        <property name="dog" ref="dog"></property>-->
+<!--        <property name="name" value="gh"></property>-->
+<!--    </bean>-->
+
+<!--    autowire byName-->
+<!--    将查找其类中所有的set方法名，例如setCat，获得将set去掉并且首字母小写的字符串，即cat。-->
+<!--    去spring容器中寻找是否有此字符串名称id的对象。-->
+<!--    如果有，就取出注入；如果没有，就报空指针异常。-->
+<!--    <bean id="client" class="com.ghnb.pojo.Client" autowire="byName">-->
+<!--        <property name="name" value="gh"></property>-->
+<!--    </bean>-->
+
+<!--    autowire byType-->
+<!--    在spring中必须保证同一类型对象唯一！，否则NoUniqueBeanDefinitionException-->
+    <bean id="client" class="com.ghnb.pojo.Client" autowire="byName">
+        <property name="name" value="gh"></property>
+    </bean>
+
+<!--    使用注解注入！-->
+<!--    使用注解进行开发，必须要加入约束文件！context头：-->
+<!--    xmlns:context="http://www.springframework.org/schema/context"-->
+<!--    http://www.springframework.org/schema/context-->
+<!--    http://www.springframework.org/schema/context/spring-context.xsd-->
+<!--    <context:annotation-config></context:annotation-config>-->
+
+</beans>

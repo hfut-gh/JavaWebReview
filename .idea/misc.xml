@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/test_hello_spring" />
+    <file type="web" url="file://$PROJECT_DIR$/test_mybatis" />
+    <file type="web" url="file://$PROJECT_DIR$/test_mybatis_multiTables" />
+    <file type="web" url="file://$PROJECT_DIR$/test_response" />
+    <file type="web" url="file://$PROJECT_DIR$/test_servlet" />
+    <file type="web" url="file://$PROJECT_DIR$/test_session_cookies" />
+    <file type="web" url="file://$PROJECT_DIR$/test_spring-mybatis" />
+    <file type="web" url="file://$PROJECT_DIR$/test_spring_annotation" />
+    <file type="web" url="file://$PROJECT_DIR$/test_spring_aop" />
+    <file type="web" url="file://$PROJECT_DIR$/test_spring_aop2" />
+    <file type="web" url="file://$PROJECT_DIR$/test_spring_IOC" />
+    <file type="web" url="file://$PROJECT_DIR$/test_springMVC_Controller_Restful" />
+    <file type="web" url="file://$PROJECT_DIR$/test_springMVC_controolerAndRestful" />
+    <file type="web" url="file://$PROJECT_DIR$/test_springMVC_helloSpring" />
+    <file type="web" url="file://$PROJECT_DIR$/test_SSM" />
+  </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/test_mybatis_lombok/pom.xml" />
+        <option value="$PROJECT_DIR$/test_springMVC_Controller_Restful/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="jdk11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

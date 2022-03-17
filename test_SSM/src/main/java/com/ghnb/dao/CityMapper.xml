@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ghnb.dao.CityMapper">
+<!--    注意命名空间一定要对应正确-->
+
+    <resultMap id="citymap" type="com.ghnb.pojo.City">
+        <id column="ID" property="ID"></id>
+        <result column="Name" property="Name"></result>
+        <result column="CountryCode" property="CountryCode"></result>
+        <result column="Distrct" property="District"></result>
+        <result column="Population" property="Population"></result>
+    </resultMap>
+
+    <!--增加一个Book-->
+    <insert id="addCity" parameterType="City">
+        insert into world.city(Name,CountryCode,District,Population)
+        values ( #{Name}, #{CountryCode},#{District},#{Population})
+    </insert>
+    <!--根据id删除一个Book-->
+    <delete id="deleteCityById" parameterType="int">
+        delete from world.city where ID=#{ID}
+    </delete>
+    <!--更新Book-->
+    <update id="updateCity" parameterType="City">
+        update world.city
+        set Name = #{Name},Population = #{Population}
+        where ID = #{ID}
+    </update>
+    <!--根据id查询,返回一个Book-->
+    <select id="queryCityById" resultMap="citymap" parameterType="int">
+        select * from world.city
+        where ID = #{ID}
+    </select>
+    <!--查询全部Book-->
+    <select id="queryAllCity" resultMap="citymap">
+        SELECT * from world.city limit 30
+    </select>
+</mapper>

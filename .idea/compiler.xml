@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="test_mybatis" />
+        <module name="test_mybatis_multiTables" />
+        <module name="test_response" />
+        <module name="test_springMVC_controolerAndRestful" />
+        <module name="test_spring-mybatis" />
+        <module name="test_servlet" />
+        <module name="test_hello_spring" />
+        <module name="test_session_cookies" />
+        <module name="test_spring_aop" />
+        <module name="test_spring_aop2" />
+        <module name="test_springMVC_helloSpring" />
+        <module name="test_SSM" />
+        <module name="test_spring_annotation" />
+        <module name="test_spring_IOC" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="test_mybatis_lombok" target="11" />
+      <module name="test_springMVC_Controller_Restful" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

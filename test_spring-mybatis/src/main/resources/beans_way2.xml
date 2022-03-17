@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--配置数据源：数据源有非常多，可以使用第三方的，也可使使用Spring的-->
+    <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+        <property name="url" value="jdbc:mysql://localhost:3306/world?
+        useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf8"></property>
+        <property name="username" value="root"></property>
+        <property name="password" value="087718"></property>
+    </bean>
+
+    <!--    配置SqlSessionFactory,将其注入-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="datasource"></property>
+        <!--        将mybatis 的配置信息放进去，包括了mappers的配置，mybatis-config.xml就不要配置mapper了-->
+        <property name="configLocation" value="classpath:mybatis-config.xml"></property>
+        <property name="mapperLocations" value="classpath:com/ghnb/dao/*.xml"></property>
+    </bean>
+
+
+    <!--    使用方式2就不需要注入SqlSessionTemplate-->
+    <!--    将实际业务注入，实际业务中sqlSession作为其一个属性，一并注入到spring中-->
+    <bean id="CityDao" class="com.ghnb.Impl.CityDapImpl2">
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+    </bean>
+
+
+
+</beans>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+<!--    实现bean的注入-->
+    <bean id="userservice" class="com.ghnb.aop1.UserServiceImpl"></bean>
+    <bean id="log" class="com.ghnb.aop1.Log"></bean>
+    <bean id="afterLog" class="com.ghnb.aop1.AfterLog"></bean>
+
+<!--    aop配置-->
+    <aop:config>
+<!--        切入点，expression表达式匹配要执行的方法-->
+        <aop:pointcut id="pointcut" expression="execution(* com.ghnb.aop1.UserServiceImpl.* (..))"/>
+<!--        执行环绕；advice-ref执行方法 . pointcut-ref切入点-->
+        <aop:advisor advice-ref="log" pointcut-ref="pointcut"></aop:advisor>
+        <aop:advisor advice-ref="afterLog" pointcut-ref="pointcut"></aop:advisor>
+    </aop:config>
+
+
+</beans>

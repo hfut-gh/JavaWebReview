@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ghnb.Mapper.CityMapper">
+    <resultMap id="CityMap" type="com.ghnb.pojo.City">
+        <id column="ID" property="ID"></id>
+        <result column="Name" property="Name"></result>
+        <result column="CountryCode" property="CountryCode"></result>
+        <result column="District" property="District"></result>
+        <result column="Population" property="Population"></result>
+    </resultMap>
+    <select id="selectCity" resultMap="CityMap">
+        select * from city limit 20
+    </select>
+    <select id="selectCityNameByCode" resultType="String">
+        select city.Name from city where CountryCode=#{cc}
+    </select>
+
+
+</mapper>

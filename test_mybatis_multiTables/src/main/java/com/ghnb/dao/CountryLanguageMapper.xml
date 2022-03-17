@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ghnb.Mapper.CityMapper">
+    <resultMap id="CityMap" type="com.ghnb.pojo.City">
+        <id column="ID" property="ID"></id>
+        <id column="Name" property="Name"></id>
+        <id column="CountryCode" property="CountryCode"></id>
+        <id column="District" property="District"></id>
+        <id column="Population" property="Population"></id>
+    </resultMap>
+
+
+</mapper>
