@@ -10,6 +10,7 @@
         <module name="test_mybatis_multiTables" />
         <module name="test_response" />
         <module name="test_springMVC_controolerAndRestful" />
+        <module name="test_ajax" />
         <module name="test_spring-mybatis" />
         <module name="test_servlet" />
         <module name="test_hello_spring" />

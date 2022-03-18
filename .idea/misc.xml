@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/test_ajax" />
     <file type="web" url="file://$PROJECT_DIR$/test_hello_spring" />
     <file type="web" url="file://$PROJECT_DIR$/test_mybatis" />
     <file type="web" url="file://$PROJECT_DIR$/test_mybatis_multiTables" />

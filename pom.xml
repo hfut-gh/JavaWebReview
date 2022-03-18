@@ -23,6 +23,7 @@
         <module>test_springMVC_helloSpring</module>
         <module>test_springMVC_controolerAndRestful</module>
         <module>test_SSM</module>
+        <module>test_ajax</module>
     </modules>
 
     <dependencies>
